@@ -1,0 +1,61 @@
+body{
+    background-image: url("shopping.jpg");
+   
+}
+
+#container {
+    margin-left: 300px;
+    margin-top: 30px;
+	background: rgb(235, 229, 229);
+	/* padding-bottom: 30%; */
+    float: left;
+    /* margin: auto; */
+    width: 50%;
+    border: 1px solid #f3f1f1;
+    padding: 10px;
+    border-radius: 1%;
+	/* margin: 1.66%; */
+	
+    max-width: 800px;
+    border: 3px solid #f3f1f1;
+    padding: 10px;
+    box-shadow: 5px 10px #f3f1f1;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 200%;
+    text-align: center;
+    
+}
+
+input{
+    width: 200px;
+    height: 30px;
+    border: 3px solid #f3f1f1;
+    align-content: center;
+    margin: 20px;
+}
+
+button{
+    background: #00e6e6;
+    width: 10%;
+    height: 5%;
+    color: white;
+}
+
+h1{
+    color: #00e6e6;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400%;
+}
+
+.list{
+ background: white;
+ width: 200px;
+ margin: 0 auto;
+ 
+}
+
+.item{
+    width: 100px;
+    height: 30px;
+    
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Shopping List</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        
+        <div id="container" ng-app="myShoppingList" ng-controller="myCtrl">
+           <h1>My Shopping List</h1>
+            <ul class="list">
+               <li class="item" ng-repeat="x in products">{{x}}
+                  <span ng-click="removeItem($index)">&times;</span>
+               </li>
+           </ul>
+           <b>Add Item: </b><input type="text" ng-model="addMe">
+           <button type="button" ng-click=addItem()><b>Add</b></button>
+           <p>{{errortext}}</p>
+           <p>Write in the input field to add items.</p>
+
+        </div>
+        <script>
+            var app = angular.module("myShoppingList",[]);
+            app.controller("myCtrl",function($scope){
+                $scope.products = ["Cheese", "Butter", "Bread"];
+                $scope.addItem = function(){
+                $scope.errortext = "";
+                        if (!$scope.addMe) {return;}
+                        if ($scope.products.indexOf($scope.addMe) == -1) {
+                            $scope.products.push($scope.addMe);
+                        } else {
+                            $scope.errortext = "The item is already in your shopping list.";
+                        }
+                }
+                $scope.removeItem = function (x) {
+                    $scope.errortext = "";
+                    $scope.products.splice(x, 1);
+                }
+            });
+        </script>
+    </body> 
+</html>
